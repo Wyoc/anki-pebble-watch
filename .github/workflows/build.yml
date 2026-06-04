@@ -1,0 +1,62 @@
+name: build-pbw
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write   # create Releases on tag
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PEBBLE_TRACK: disabled   # suppress analytics/telemetry prompt in CI
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Put pebble-tool on PATH
+        run: echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Install system deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            nodejs npm libsdl2-2.0-0 libglib2.0-0 libpixman-1-0 zlib1g
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Install pebble-tool
+        run: uv tool install pebble-tool --python 3.13
+
+      - name: Cache Pebble SDK
+        uses: actions/cache@v4
+        with:
+          path: ~/.pebble-sdk
+          key: pebble-sdk-${{ runner.os }}-v1
+
+      - name: Install Pebble SDK
+        run: pebble sdk install latest < /dev/null
+
+      - name: Build
+        run: pebble build
+
+      - name: Upload .pbw artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: watch-pbw
+          path: build/*.pbw
+          if-no-files-found: error
+
+      - name: Attach .pbw to Release (on tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/*.pbw

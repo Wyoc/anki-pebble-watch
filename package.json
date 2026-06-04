@@ -1,0 +1,66 @@
+{
+  "name": "watch",
+  "author": "Wyoc",
+  "version": "1.0.0",
+  "keywords": [
+    "pebble-app"
+  ],
+  "private": true,
+  "dependencies": {},
+  "pebble": {
+    "displayName": "Anki",
+    "uuid": "5b694e8e-c694-4c64-9d2d-052f0382d90c",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "diorite",
+      "emery"
+    ],
+    "watchapp": {
+      "watchface": false
+    },
+    "companionApp": {
+      "android": {
+        "url": "https://github.com/Wyoc/anki-pebble-companion",
+        "apps": [
+          {
+            "package": "com.wyoc.ankipebble"
+          }
+        ]
+      }
+    },
+    "messageKeys": [
+      "MSG_TYPE",
+      "DECK_NAME",
+      "DECK_ID",
+      "DECK_INDEX",
+      "DECK_TOTAL",
+      "DECK_COUNTS",
+      "CARD_TEXT",
+      "CARD_FIELD",
+      "CHUNK_INDEX",
+      "CHUNK_TOTAL",
+      "NOTE_ID",
+      "CARD_ORD",
+      "BUTTON_COUNT",
+      "BTN_LABEL_HARD",
+      "BTN_LABEL_OK",
+      "BTN_LABEL_EASY",
+      "EASE",
+      "SESSION_STATE",
+      "STATE_COUNTS"
+    ],
+    "resources": {
+      "media": [
+        { "type": "bitmap", "name": "IMG_REVEAL",     "file": "images/reveal.png" },
+        { "type": "bitmap", "name": "IMG_GRADE_EASY", "file": "images/grade_easy.png" },
+        { "type": "bitmap", "name": "IMG_GRADE_OK",   "file": "images/grade_ok.png" },
+        { "type": "bitmap", "name": "IMG_GRADE_HARD", "file": "images/grade_hard.png" },
+        { "type": "font", "name": "DEJAVU_14", "file": "fonts/dejavu.ttf", "characterRegex": "[\\u0020-\\u007E\\u00C0-\\u00FF\\u0400-\\u0451\\u2026]" },
+        { "type": "font", "name": "DEJAVU_18", "file": "fonts/dejavu.ttf", "characterRegex": "[\\u0020-\\u007E\\u00C0-\\u00FF\\u0400-\\u0451\\u2026]" },
+        { "type": "font", "name": "DEJAVU_24", "file": "fonts/dejavu.ttf", "characterRegex": "[\\u0020-\\u007E\\u00C0-\\u00FF\\u0400-\\u0451\\u2026]" },
+        { "type": "font", "name": "DEJAVU_28", "file": "fonts/dejavu.ttf", "characterRegex": "[\\u0020-\\u007E\\u00C0-\\u00FF\\u0400-\\u0451\\u2026]" }
+      ]
+    }
+  }
+}

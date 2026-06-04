@@ -1,0 +1,18 @@
+# Pebble build output
+build/
+
+# npm (the watch has no deps; pebble build bundles JS itself)
+node_modules/
+package-lock.json
+
+# waf lock/state
+.lock-waf_*
+.wafpickle-*
+
+# Claude Code
+.claude/
+CLAUDE.md
+
+# OS / editor
+.DS_Store
+*.swp
