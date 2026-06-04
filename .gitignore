@@ -16,3 +16,7 @@ CLAUDE.md
 # OS / editor
 .DS_Store
 *.swp
+
+# Python cache
+__pycache__/
+*.pyc
