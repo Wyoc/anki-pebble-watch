@@ -56,10 +56,10 @@
         { "type": "bitmap", "name": "IMG_GRADE_EASY", "file": "images/grade_easy.png" },
         { "type": "bitmap", "name": "IMG_GRADE_OK",   "file": "images/grade_ok.png" },
         { "type": "bitmap", "name": "IMG_GRADE_HARD", "file": "images/grade_hard.png" },
-        { "type": "font", "name": "DEJAVU_14", "file": "fonts/dejavu.ttf", "characterRegex": "[\\u0020-\\u007E\\u00C0-\\u00FF\\u0400-\\u0451\\u2026]" },
-        { "type": "font", "name": "DEJAVU_18", "file": "fonts/dejavu.ttf", "characterRegex": "[\\u0020-\\u007E\\u00C0-\\u00FF\\u0400-\\u0451\\u2026]" },
-        { "type": "font", "name": "DEJAVU_24", "file": "fonts/dejavu.ttf", "characterRegex": "[\\u0020-\\u007E\\u00C0-\\u00FF\\u0400-\\u0451\\u2026]" },
-        { "type": "font", "name": "DEJAVU_28", "file": "fonts/dejavu.ttf", "characterRegex": "[\\u0020-\\u007E\\u00C0-\\u00FF\\u0400-\\u0451\\u2026]" }
+        { "type": "font", "name": "DEJAVU_14", "file": "fonts/dejavu.ttf", "characterRegex": "[\\u0020-\\u007E\\u00C0-\\u00FF\\u010C\\u010D\\u0160\\u0161\\u017D\\u017E\\u0400-\\u0451\\u2026]" },
+        { "type": "font", "name": "DEJAVU_18", "file": "fonts/dejavu.ttf", "characterRegex": "[\\u0020-\\u007E\\u00C0-\\u00FF\\u010C\\u010D\\u0160\\u0161\\u017D\\u017E\\u0400-\\u0451\\u2026]" },
+        { "type": "font", "name": "DEJAVU_24", "file": "fonts/dejavu.ttf", "characterRegex": "[\\u0020-\\u007E\\u00C0-\\u00FF\\u010C\\u010D\\u0160\\u0161\\u017D\\u017E\\u0400-\\u0451\\u2026]" },
+        { "type": "font", "name": "DEJAVU_28", "file": "fonts/dejavu.ttf", "characterRegex": "[\\u0020-\\u007E\\u00C0-\\u00FF\\u010C\\u010D\\u0160\\u0161\\u017D\\u017E\\u0400-\\u0451\\u2026]" }
       ]
     }
   }
